@@ -1,7 +1,7 @@
 # mke-eats
 # Milwaukee Restaurant Discovery Dashboard
 
-This web application helps users discover and explore Milwaukee restaurants. It pulls from a pool of 60 (greater than 3 star Google review) Milwaukee restaurants, each with Google review, Reddit comment, and Reddit post data. 
+This web application helps users discover and explore Milwaukee restaurants. It pulls from a pool of 60 well reviewed Milwaukee restaurants. Mentions of these restaurants from Google reviews, Reddit comments, and Reddit posts are all pulled as text data. 
 
 ## Three main components:
 
