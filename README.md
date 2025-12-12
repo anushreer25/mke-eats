@@ -9,13 +9,6 @@ This web application helps users discover and explore Milwaukee restaurants. It 
 2. **Trending Restaurants: Sentiment analysis** User can view top 20 trending restaurants as well as which ones are gaining/losing popularity based on sentiment trends.
 3. **Restaurant Explorer** Browse recent mentions of specific restaurants from Reddit and Google Reviews.
 
-## How to Use
-
-### Prerequisites
-
-- Python 3.11+
-- Ollama (for LLM functionality)
-- Git
 
 ### Installation
 
