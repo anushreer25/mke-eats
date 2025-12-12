@@ -128,26 +128,18 @@ app.py (Streamlit UI)
   - "very good" means positive
 - Sentiment score ranges from -1 to +1
 
-**Implementation** (`helpers.py`):
-```python
-def simple_sentiment_analysis(text):
-    # Tokenize and score each word
-    # Apply negation/intensifier rules
-    # Normalize to [-1, 1]
-```
-
 ### Trend Detection
 
 Compares recent vs. older reviews to detect sentiment changes:
 
-1. **Split reviews**: Recent 60% vs. older 40% for each restaurant
-2. **Calculate average sentiment** for each period
-3. **Determine trend**:
-   - Change > 0.02 → 🟢 Improving
-   - Change < -0.02 → 🔴 Declining
-   - Otherwise → ⚪ Stable
+1. Split reviews: Recent 60% vs. older 40% for each restaurant
+2. Calculate average sentiment for each period
+3. Determine trend:
+   - Change > 0.02 means improving
+   - Change < -0.02 means declining
+   - Else, it's stable
 
-### RAG (Retrieval-Augmented Generation)
+### RAG (Retrieval Augmented Generation)
 
 **BM25 Indexing** (Pyserini)
 - Combines all text into a searchable corpus
@@ -156,22 +148,11 @@ Compares recent vs. older reviews to detect sentiment changes:
 
 **Query Processing**:
 1. User submits natural language query
-2. Query decomposition for complex questions (>200 chars or multiple sentences)
-3. BM25 retrieves top-k relevant documents
-4. Results fusion if multiple sub-queries
+2. BM25 retrieves top-k relevant documents
 
 **LLM Generation** (Ollama):
-- Model: Llama 3.2 (3B parameters)
-- Local inference (no API costs)
-- Generates answers based on retrieved context
+- Model: Llama 3.2:1b
 - Limited to 150 tokens for speed
-
-**Pipeline** (`agent.py`):
-```
-retrieve() → generate_answer() → END
-```
-
-### Key Components
 
 **`helpers.py`**
 - `simple_sentiment_analysis()`: Lexicon-based sentiment scoring
@@ -195,14 +176,6 @@ retrieve() → generate_answer() → END
 - Data loading with caching (`@st.cache_data`)
 - Real-time query processing and visualization
 
-### Performance Optimizations
-
-- **Retriever caching**: Avoid rebuilding index on each query
-- **Token limit**: Cap LLM output at 150 tokens
-- **Decomposition threshold**: Only trigger for complex queries
-- **Reduced retrieval**: K=10 documents (adjustable)
-
-## Technologies Used
 
 - **Frontend**: Streamlit
 - **Retrieval**: Pyserini (BM25)
