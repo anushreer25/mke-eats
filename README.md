@@ -22,7 +22,7 @@ This web application helps users discover and explore Milwaukee restaurants. It 
 1. **Clone the repo**
 ```bash
 git clone 
-cd mke-restaurant-dashboard
+cd mke-eats
 ```
 
 2. **Install dependencies**
