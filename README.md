@@ -164,14 +164,11 @@ Compares recent vs. older reviews to detect sentiment changes:
 - `PyseriniBM25Retriever`: Custom retriever class
 
 **`app.py`**
-- Streamlit interface with three main sections
-- Data loading with caching (`@st.cache_data`)
-- Real-time query processing and visualization
+- Streamlit interface with the three components
 
 
 - **Frontend**: Streamlit
 - **Retrieval**: Pyserini (BM25)
 - **LLM**: Ollama (Llama 3.2)
-- **Orchestration**: LangChain, LangGraph
 - **Data Processing**: Pandas, PRAW
-- **Sentiment Analysis**: Custom lexicon-based approach
+- **Sentiment Analysis**: Manual/custom approach
