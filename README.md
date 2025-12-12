@@ -58,14 +58,6 @@ Ensure you are in a mnt directory within WSL (if using Linux) with pyserini inst
 conda activate pyserini
 ```
 
-6. **Build search index**
-
-The index will be built automatically on first run, or manually:
-```bash
-python -c "from utils.retriever import create_retriever; create_retriever()"
-```
-
-
 ### Running the Application
 ```bash
 streamlit run app.py
