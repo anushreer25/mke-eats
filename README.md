@@ -5,8 +5,8 @@ This web application helps users discover and explore Milwaukee restaurants. It 
 
 ## Three main components:
 
-1. **AI-Powered Search: Natural Language search** Ask natural language questions about Milwaukee restaurants using BM25 retrieval and local LLM.
-2. **Trending Restaurants: Sentiment analysis** User can view top 20 trending restaurants as well as which ones are gaining/losing popularity based on sentiment trends.
+1. **Natural Language search:** Ask natural language questions about Milwaukee restaurants using BM25 retrieval and local LLM.
+2. **Trending Restaurants Sentiment analysis:** User can view top 20 trending restaurants as well as which ones are gaining/losing popularity based on sentiment trends.
 3. **Restaurant Explorer** Browse recent mentions of specific restaurants from Reddit and Google Reviews.
 
 
